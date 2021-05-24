@@ -67,10 +67,9 @@ $(document).ready(function () {
     $('#hour-23 .description').val(localStorage.getItem('hour-23'));
   
   
-    // display next  day on page
+    // display next day on page
     // $('#currentDay').text(moment().format('dddd, MMMM Do'));
-    $('#currentDay').text(moment().format('dddd, MMMM Do'));
-
+    $('#currentDay').text(moment().add(1, 'days').format('dddd, MMMM Do'));
   });
   
   // deleteBtn 
