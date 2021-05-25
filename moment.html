@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="clock-div"></div>
+    <div id="clock" class="clock">loading ...</div>
+
+    <!-- MOMENT.JS -->
+    <!-- <script>
+      let renderClock = function() {
+          document.querySelector("#clock.div").innerHTML =
+          "<h5>${moment().format(\"MMMM do YYYY, h:mm:ss a\")}</h5>";
+      };
+      renderClock();
+      setInterval(renderClock, 1000);
+    </script> -->
+
+<!-- <script>
+$('#clock').fitText(1.3);
+
+function update() {
+  $('#clock').html(moment().format('D. MMMM YYYY H:mm:ss'));
+}
+
+setInterval(update, 1000);
+</script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </body>
+</html>

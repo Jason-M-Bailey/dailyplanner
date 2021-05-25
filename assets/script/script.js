@@ -33,6 +33,7 @@ $(document).ready(function () {
   var interval = setInterval(hourUpdater, 15000);
 
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
+  
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -74,16 +75,13 @@ $(document).ready(function () {
 });
 
 // copy to clipboard
-var copyBtn = document.getElementsByClassName(".copy");
-var textArea = document.getElementsByClassName(".textarea");
+// var copyBtn = document.getElementsByClassName(".copy");
+// var textArea = document.getElementsByClassName(".textarea");
 
-copyBtn.addEventListener("click", () => {
-  textArea.select();
-  document.execCommand("copy");
-  alert("Password Copied");
-});
-
-var refreshButtonEl = $("#refresh-btn");
-refreshButtonEl.on("click", function () {
-  location.reload();
-});
+// function () {
+// copyBtn.addEventListener("click", () => {
+//   textArea.select();
+//   document.execCommand("copy");
+//   alert("Password Copied");
+// });
+// };

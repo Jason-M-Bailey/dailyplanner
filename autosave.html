@@ -4,38 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autosave</title>
+    <!-- BOOTSTRAP -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <title>Autosave</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <textarea id="textarea"></textarea>
-    <div class="form-status-holder"></div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-      var timeoutId;
-      var value = "textarea"
+    <input type="text" id="my-input" />
+    <div id="hour-6" class="row time-block">
+        <div class="col-md-1 col-sm-12 hour">
+        </div>
+        <textarea class="col-md-8 col-sm-12 description">
+        </textarea>
+  <!-- -->
 
-      $("textarea").on("input propertychange change", function () {
-        console.log("Textarea Change");
+        <button class="btn deleteBtn col-md-1 col-sm-4" id="refresh-btn"><i class="far fa-trash-alt"></i></button>
 
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(function () {
-          // Runs 1 second (1000 ms) after the last change
-          saveToDB();
-          localStorage.setItem(textarea, value);
-        }, 1000);
-      });
-
-      function saveToDB() {
-        console.log("Saving to the db");
-
-        // Now show them we saved and when we did
-        var d = new Date();
-        $(".form-status-holder").html("Saved! Last: " + d.toLocaleTimeString());
-      }
-    </script>
+        <!-- -->
+      </div>
   </body>
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- MOMENT.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  <script>
+ // Get the input box
+let input = document.querySelector('.description');
+
+// Add an event listener to monitor changes
+input.addEventListener('keyup', function (e) {
+    console.log('Value:', input.value);
+});
+
+
+
+  </script>
 </html>
