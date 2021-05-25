@@ -64,8 +64,11 @@ $(document).ready(function () {
     setTimeout(function () {
       $(".deleteNotification").removeClass("show");
     }, 5000);
+
+    
     // something something clear value
     removeItem(time, value);
+    location.reload();
   });
 });
 
