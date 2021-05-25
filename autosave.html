@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Autosave</title>
+  </head>
+  <body>
+    <textarea id="textarea"></textarea>
+    <div class="form-status-holder"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      var timeoutId;
+      var value = "textarea"
+
+      $("textarea").on("input propertychange change", function () {
+        console.log("Textarea Change");
+
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          // Runs 1 second (1000 ms) after the last change
+          saveToDB();
+          localStorage.setItem(textarea, value);
+        }, 1000);
+      });
+
+      function saveToDB() {
+        console.log("Saving to the db");
+
+        // Now show them we saved and when we did
+        var d = new Date();
+        $(".form-status-holder").html("Saved! Last: " + d.toLocaleTimeString());
+      }
+    </script>
+  </body>
+</html>

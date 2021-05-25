@@ -51,7 +51,8 @@ $(document).ready(function () {
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
 
-  $("#currentDay").text(moment().format("dddd, MMMM Do"));
+  $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+  //setInterval(hourUpdater, 1000);
 });
 
 $(document).ready(function () {
@@ -60,15 +61,15 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    $(".deleteNotification").addClass("show");
+    // $(".deleteNotification").addClass("show");
     setTimeout(function () {
-      $(".deleteNotification").removeClass("show");
-    }, 5000);
-
+      //$(".deleteNotification").removeClass("show");
+      location.reload();
+    });
 
     // something something clear value
-    removeItem(time, value);
-    location.reload();
+    // removeItem(time, value);
+    // location.reload();
   });
 });
 
@@ -82,7 +83,7 @@ copyBtn.addEventListener("click", () => {
   alert("Password Copied");
 });
 
-var refreshButtonEl = $('#refresh-btn');
-refreshButtonEl.on('click', function () {
+var refreshButtonEl = $("#refresh-btn");
+refreshButtonEl.on("click", function () {
   location.reload();
 });
