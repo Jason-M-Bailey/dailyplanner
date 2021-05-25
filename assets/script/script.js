@@ -6,34 +6,18 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
     $(".notification").addClass("show");
+    $(".notification-2").addClass("show");
     setTimeout(function () {
       $(".notification").removeClass("show");
-    }, 5000);
+      $(".notification-2").removeClass("show");
+    }, 2000);
   });
 
-  function hourUpdater() {
-    var currentHour = moment().hours();
-    $(".time-block").each(function () {
-      var blockHour = parseInt($(this).attr("id").split("-")[1]);
-      if (blockHour < currentHour) {
-        $(this).addClass("past");
-      } else if (blockHour === currentHour) {
-        $(this).removeClass("past");
-        $(this).addClass("present");
-      } else {
-        $(this).removeClass("past");
-        $(this).removeClass("present");
-        $(this).addClass("future");
-      }
-    });
-  }
 
-  hourUpdater();
 
-  var interval = setInterval(hourUpdater, 15000);
-
-  $("#hour-6 .description").val(localStorage.getItem("hour-6"));
+  // var interval = setInterval(hourUpdater, 15000);
   
+  $("#hour-6 .description").val(localStorage.getItem("hour-6"));
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -51,10 +35,33 @@ $(document).ready(function () {
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
-
-  $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
   //setInterval(hourUpdater, 1000);
 });
+
+// how to get this to update every second?
+$("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+//
+
+//
+function hourUpdater() {
+  var currentHour = moment().hours();
+  $(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("id").split("-")[1]);
+    if (blockHour < currentHour) {
+      $(this).addClass("past");
+    } else if (blockHour === currentHour) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+    } else {
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).addClass("future");
+    }
+  });
+}
+hourUpdater();
+//
+
 
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
