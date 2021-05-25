@@ -65,7 +65,7 @@ $(document).ready(function () {
       $(".deleteNotification").removeClass("show");
     }, 5000);
 
-    
+
     // something something clear value
     removeItem(time, value);
     location.reload();
@@ -80,4 +80,9 @@ copyBtn.addEventListener("click", () => {
   textArea.select();
   document.execCommand("copy");
   alert("Password Copied");
+});
+
+var refreshButtonEl = $('#refresh-btn');
+refreshButtonEl.on('click', function () {
+  location.reload();
 });
