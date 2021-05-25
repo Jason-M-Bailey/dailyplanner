@@ -5,15 +5,13 @@ $(document).ready(function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
-    $(".notification").addClass("show");
+    // $(".notification").addClass("show");
     $(".notification-2").addClass("show");
     setTimeout(function () {
-      $(".notification").removeClass("show");
+      // $(".notification").removeClass("show");
       $(".notification-2").removeClass("show");
     }, 2000);
   });
-
-
 
   // var interval = setInterval(hourUpdater, 15000);
   
@@ -69,12 +67,12 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    // $(".deleteNotification").addClass("show");
+    $(".deleteNotification").addClass("show");
     setTimeout(function () {
-      //$(".deleteNotification").removeClass("show");
+      $(".deleteNotification").removeClass("show");
       location.reload();
-    });
-
+    }, 2000);
+    
     // something something clear value
     // removeItem(time, value);
     // location.reload();

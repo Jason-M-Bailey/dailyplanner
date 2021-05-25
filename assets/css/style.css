@@ -31,6 +31,7 @@ textarea {
   background-color: transparent;
   color: var(--dark);
   padding: 32px 0px;
+  margin-bottom: 0;
 }
 
 .description {
@@ -94,15 +95,15 @@ textarea {
 .copy:hover, 
 .deleteBtn:hover,
 .saveBtn:hover {
-  font-size: 14px;
+  font-size: 18px;
   transition: all 0.5s ease-in-out;
 }
 
-.notification {
+/* .notification {
   display: none;
   padding-bottom: 10px;
   color: black;
-}
+} */
 
 .notification-2 {
   font-size: 40px;
@@ -111,9 +112,9 @@ textarea {
 }
 
 .deleteNotification {
-  display: none;
-  padding-bottom: 10px;
-  color: black;
+  font-size: 40px;
+  transition: ease-in-out 1s;
+  opacity: 0;
 } 
 
 .show {
@@ -133,12 +134,4 @@ footer {
   .deleteBtn, .copy, .saveBtn {
     display: none;
   }
-}
-
-.tooltiptext {
- opacity: 0;
-}
-
-.tooltiptext:active {
-  opacity: 1;
 }
