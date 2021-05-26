@@ -28,7 +28,13 @@
     <p class="lead">Simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
     <p><a href="./nextday.html">Take a look at tomorrow's schedule</a></p>
+    
+    <!-- SCRIPT IS COMMENTED OUT AS WELL -->
     <div id="clock-div"></div>
+
+    <!-- 2ND ATTEMPT AT DYNAMIC CLOCK -->
+    <div id="datetime"></div>
+
   </header>
   <!-- -->
   <!-- -->
@@ -52,19 +58,16 @@
   <div class="container">
     <h3>Personal</h3>
     <div id="hour-6" class="row time-block">
-      <div class="col-md-1 col-sm-12 hour">
+      <div class="col-md-1 hour">
         6AM
       </div>
-      <textarea placeholder="type a calendar event and click save ---->" class="col-md-8 col-sm-12 description">
+      <textarea placeholder="type a calendar event and click save ---->" class="col-md-9 col-sm-10 description">
       </textarea>
-
-
 
 <!-- -->
 <!-- add a tooltip to show the button was clicked and the action completed -->
-      <button class="btn saveBtn col-md-1 col-sm-4"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1 col-sm-4" id="refresh-btn"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1 col-sm-4"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1" id="refresh-btn"><i class="far fa-trash-alt"></i></button>
       <!-- -->
     </div>
 
@@ -73,21 +76,20 @@
       <div class="col-md-1 hour">
         7AM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
+    
     <div id="hour-8" class="row time-block">
       <div class="col-md-1 hour">
         8AM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <!-- -->
@@ -96,168 +98,154 @@
       <div class="col-md-1 hour">
         9AM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-10" class="row time-block">
       <div class="col-md-1 hour">
         10AM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-11" class="row time-block">
       <div class="col-md-1 hour">
         11AM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-12" class="row time-block">
       <div class="col-md-1 hour">
         12PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
    <div id="hour-13" class="row time-block">
       <div class="col-md-1 hour">
         1PM
       </div>
-      <textarea class="col-md-8 description" placeholder="Lunch - Do Not Schedule">
+      <textarea class="col-md-9 col-sm-10 description" placeholder="Lunch - Do Not Schedule">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-14" class="row time-block">
       <div class="col-md-1 hour">
         2PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-15" class="row time-block">
      <div class="col-md-1 hour">
         3PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-16" class="row time-block">
       <div class="col-md-1 hour">
         4PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-17" class="row time-block">
       <div class="col-md-1 hour">
         5PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
     <!-- -->
     <!-- -->
     <!-- additional hours -->
     <h3>Personal Time</h3>
     <div id="hour-18" class="row time-block">
+
       <div class="col-md-1 hour">
         6PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-19" class="row time-block">
       <div class="col-md-1 hour">
         7PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 col-sm-10 description">
       </textarea>
-      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-      <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
+      <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
+      <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
     <div id="hour-20" class="row time-block">
       <div class="col-md-1 hour">
         8PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
     </div>
 
     <div id="hour-21" class="row time-block">
       <div class="col-md-1 hour">
         9PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
     </div>
 
     <div id="hour-22" class="row time-block">
       <div class="col-md-1 hour">
         10PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
     </div>
 
     <div id="hour-23" class="row time-block">
       <div class="col-md-1 hour">
         11PM
       </div>
-      <textarea class="col-md-8 description">
+      <textarea class="col-md-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
-      <button class="btn copy col-md-1"><i class="far fa-copy"></i></button>
     </div>
     
     <footer>UNCC Bootcamp - 2021 - Week 05 Homework

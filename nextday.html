@@ -19,9 +19,14 @@
     <p id="currentDay" class="lead"></p>
     <p><a href="./index.html">Go back to today</a></p>
   </header>
-  <!-- <section class='text-center notification' id="notify">Appointment Added to <code>localStorage</code> ✔️</section> -->
-  <section class='text-center deleteNotification' id="notify">Appointment deleted from <code>localStorage</code> ✔️</section>
+
+<!-- NOTIFICATION -->
+  <section class='text-center notification-2' id="notify">Updated!</section>
+
+<!-- HOUR BLOCKS -->
   <div class="container">
+
+    <!-- PERSONAL HOUR BLOCKS -->
     <h3>Personal</h3>
     <div id="hour-6" class="row time-block">
       <div class="col-md-1 hour">
@@ -42,6 +47,7 @@
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
     </div>
+
     <div id="hour-8" class="row time-block">
       <div class="col-md-1 hour">
         8AM
@@ -52,6 +58,7 @@
       <button class="btn deleteBtn col-md-1"><i class="far fa-trash-alt"></i></button>
     </div>
 
+    <!-- WORKDAY BLOCKS -->
     <h3>Workday</h3>
     <div id="hour-9" class="row time-block">
       <div class="col-md-1 hour">
@@ -61,6 +68,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-10" class="row time-block">
       <div class="col-md-1 hour">
         10AM
@@ -69,6 +77,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-11" class="row time-block">
       <div class="col-md-1 hour">
         11AM
@@ -77,6 +86,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-12" class="row time-block">
       <div class="col-md-1 hour">
         12PM
@@ -85,14 +95,16 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
    <div id="hour-13" class="row time-block">
       <div class="col-md-1 hour">
         1PM
       </div>
-      <textarea class="col-md-10 description">
+      <textarea class="col-md-10 description" placeholder="Lunch - Do Not Schedule">
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-14" class="row time-block">
       <div class="col-md-1 hour">
         2PM
@@ -101,6 +113,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-15" class="row time-block">
      <div class="col-md-1 hour">
         3PM
@@ -109,6 +122,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-16" class="row time-block">
       <div class="col-md-1 hour">
         4PM
@@ -117,6 +131,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-17" class="row time-block">
       <div class="col-md-1 hour">
         5PM
@@ -125,8 +140,10 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
-    <!-- additional hours -->
+
+    <!-- PERSONAL HOURS BLOCK -->
     <h3>Personal Time</h3>
+
     <div id="hour-18" class="row time-block">
       <div class="col-md-1 hour">
         6PM
@@ -135,6 +152,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-19" class="row time-block">
       <div class="col-md-1 hour">
         7PM
@@ -143,6 +161,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-20" class="row time-block">
       <div class="col-md-1 hour">
         8PM
@@ -151,6 +170,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-21" class="row time-block">
       <div class="col-md-1 hour">
         9PM
@@ -159,6 +179,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-22" class="row time-block">
       <div class="col-md-1 hour">
         10PM
@@ -167,6 +188,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <div id="hour-23" class="row time-block">
       <div class="col-md-1 hour">
         11PM
@@ -176,13 +198,14 @@
       <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
     
-
+    <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- MOMENT.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
+    <!-- PERSONALIZED JAVASCRIPT -->
     <script src="./assets/script/nextday.js"></script>
 
-
 </body>
-
 </html>

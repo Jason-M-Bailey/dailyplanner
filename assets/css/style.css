@@ -95,10 +95,15 @@ textarea:hover {
   border-bottom-left-radius: 15px;
 }
 
-.copy {
+.deleteBtn {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+/* 
+.copy {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+} */
 
 .copy:hover,
 .deleteBtn:hover,
@@ -141,8 +146,8 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .deleteBtn,
-  .copy,
   .saveBtn {
-    display: none;
+    border-radius: 5px;
+    font-size: 14px;
   }
-}
+} 

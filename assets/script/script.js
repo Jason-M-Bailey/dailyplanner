@@ -16,6 +16,9 @@ $(document).ready(function () {
   // var interval = setInterval(hourUpdater, 15000);
 
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
+
+  console.log()
+
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -37,7 +40,23 @@ $(document).ready(function () {
 });
 
 // how to get this to update every second?
-$("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+// $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+
+// 2ND ATTEMPT AT DYNAMIC SECONDS
+var datetime = null,
+date = null;
+
+var update = function () {
+date = moment(new Date());
+datetime.html(date.format("dddd, MMMM Do YYYY, h:mm:ss a"));
+};
+
+$(document).ready(function () {
+datetime = $("#datetime");
+update();
+setInterval(update, 1000);
+});
+
 //
 
 //

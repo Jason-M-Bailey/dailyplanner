@@ -50,16 +50,21 @@ $(document).ready(function () {
   $("#currentDay").text(moment().add(1, "days").format("dddd, MMMM Do"));
 });
 
+
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    $(".deleteNotification").addClass("show");
+    $(".notification-2").addClass("show");
     setTimeout(function () {
-      $(".deleteNotification").removeClass("show");
-    }, 5000);
-    removeItem(time, value);
+      $(".notification-2").removeClass("show");
+      location.reload();
+    }, 2000);
+
+    // something something clear value
+    // removeItem(time, value);
+    // location.reload();
   });
 });
