@@ -14,7 +14,7 @@ $(document).ready(function () {
   });
 
   // var interval = setInterval(hourUpdater, 15000);
-  
+
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
@@ -60,19 +60,18 @@ function hourUpdater() {
 hourUpdater();
 //
 
-
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    $(".deleteNotification").addClass("show");
+    $(".notification-2").addClass("show");
     setTimeout(function () {
-      $(".deleteNotification").removeClass("show");
+      $(".notification-2").removeClass("show");
       location.reload();
     }, 2000);
-    
+
     // something something clear value
     // removeItem(time, value);
     // location.reload();

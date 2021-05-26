@@ -16,6 +16,9 @@ body {
 h3 {
   padding-top: 20px;
 }
+.navbar {
+  justify-content: space-evenly;
+}
 
 textarea {
   background: transparent;
@@ -24,6 +27,11 @@ textarea {
   color: var(--dark);
   border-left: 1px solid var(--dark);
   padding: 10px;
+  border-radius: 5px;
+}
+
+textarea:hover {
+  box-shadow: 0 0 11px black;
 }
 
 .jumbotron {
@@ -70,7 +78,7 @@ textarea {
   color: white;
 }
 
-.saveBtn, 
+.saveBtn,
 .deleteBtn,
 .copy {
   border: 1px solid black;
@@ -92,11 +100,12 @@ textarea {
   border-bottom-right-radius: 15px;
 }
 
-.copy:hover, 
+.copy:hover,
 .deleteBtn:hover,
 .saveBtn:hover {
   font-size: 18px;
   transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 11px black;
 }
 
 /* .notification {
@@ -115,7 +124,7 @@ textarea {
   font-size: 40px;
   transition: ease-in-out 1s;
   opacity: 0;
-} 
+}
 
 .show {
   display: block;
@@ -131,7 +140,9 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  .deleteBtn, .copy, .saveBtn {
+  .deleteBtn,
+  .copy,
+  .saveBtn {
     display: none;
   }
 }
