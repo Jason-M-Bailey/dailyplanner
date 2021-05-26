@@ -25,7 +25,7 @@ textarea {
   border: none;
   resize: none;
   color: var(--dark);
-  border-left: 1px solid var(--dark);
+  /* border-left: 1px solid var(--dark); */
   padding: 10px;
   border-radius: 5px;
 }
@@ -53,14 +53,14 @@ textarea:hover {
 
 .row {
   white-space: pre-wrap;
-  min-height: 100px;
+  /* min-height: 100px; */
   border-top: 3px solid white;
 }
 
 .hour {
   background-color: #ffffff;
   color: var(--dark);
-  border-top: 1px dashed #000000;
+  border-top: 1px dashed var(--light);
 }
 
 .past {
