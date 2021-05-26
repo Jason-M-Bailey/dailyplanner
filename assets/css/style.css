@@ -13,6 +13,24 @@ body {
   line-height: 1;
 }
 
+#datetime {
+  background: var(--secondary);
+  color: var(--light);
+  font-size: 20px;
+  padding: 2%;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: black;
+  color: white;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
 h3 {
   padding-top: 20px;
 }
@@ -28,6 +46,7 @@ textarea {
   /* border-left: 1px solid var(--dark); */
   padding: 10px;
   border-radius: 5px;
+  min-height: 20px auto;
 }
 
 textarea:hover {
@@ -53,7 +72,6 @@ textarea:hover {
 
 .row {
   white-space: pre-wrap;
-  /* min-height: 100px; */
   border-top: 3px solid white;
 }
 

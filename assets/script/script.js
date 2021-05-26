@@ -108,3 +108,18 @@ $(document).ready(function () {
 //   alert("Password Copied");
 // });
 // };
+
+
+// STICKY DATETIME ON SCROLL
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("datetime");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
