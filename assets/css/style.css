@@ -115,11 +115,6 @@ textarea:hover {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-/* 
-.copy {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-} */
 
 .copy:hover,
 .deleteBtn:hover,
@@ -129,13 +124,6 @@ textarea:hover {
   box-shadow: 0 0 11px black;
 }
 
-/* .notification {
-  display: none;
-  padding-bottom: 10px;
-  color: black;
-} */
-
-/* notification-2 */
 .notification {
   font-size: 40px;
   transition: ease-in-out 1s;

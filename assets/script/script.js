@@ -1,19 +1,13 @@
-// add days forward/back buttons
-
-
-
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
-    $(".notification").addClass("show"); // changed from -2
+    $(".notification").addClass("show");
     setTimeout(function () {
-      $(".notification").removeClass("show"); // changed from -2
+      $(".notification").removeClass("show");
     }, 2000);
   });
-
-  // var interval = setInterval(hourUpdater, 15000);
 
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
@@ -33,30 +27,22 @@ $(document).ready(function () {
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
-  //setInterval(hourUpdater, 1000);
 });
 
-// how to get this to update every second?
-// $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
-
-// 2ND ATTEMPT AT DYNAMIC SECONDS
 var datetime = null,
-date = null;
+  date = null;
 
 var update = function () {
-date = moment(new Date());
-datetime.html(date.format("dddd, MMMM Do YYYY, h:mm:ss a"));
+  date = moment(new Date());
+  datetime.html(date.format("dddd, MMMM Do YYYY, h:mm:ss a"));
 };
 
 $(document).ready(function () {
-datetime = $("#datetime");
-update();
-setInterval(update, 1000);
+  datetime = $("#datetime");
+  update();
+  setInterval(update, 1000);
 });
 
-//
-
-//
 function hourUpdater() {
   var currentHour = moment().hours();
   $(".time-block").each(function () {
@@ -74,7 +60,6 @@ function hourUpdater() {
   });
 }
 hourUpdater();
-//
 
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
@@ -82,40 +67,25 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    $(".notification").addClass("show"); // changed from -2
+    $(".notification").addClass("show");
     setTimeout(function () {
-      $(".notification").removeClass("show"); // changed from -2 
+      $(".notification").removeClass("show");
       location.reload();
     }, 2000);
-
-    // something something clear value
-    // removeItem(time, value);
-    // location.reload();
   });
 });
 
-//copy to clipboard
-// var copyBtn = document.getElementsByClassName(".copy");
-// var textArea = document.getElementsByClassName(".textarea");
-
-// function () {
-// copyBtn.addEventListener("click", () => {
-//   textArea.select();
-//   document.execCommand("copy");
-//   alert("Password Copied");
-// });
-// };
-
-
 // STICKY DATETIME ON SCROLL
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+  myFunction();
+};
 
 var navbar = document.getElementById("datetime");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
