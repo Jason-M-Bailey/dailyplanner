@@ -26,7 +26,7 @@
   <header class="jumbotron">
     <h1 class="display-3">Today's Schedule</h1>
     <p class="lead">Simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
+    <!-- <p id="currentDay" class="lead"></p> -->
     <p><a href="./nextday.html">Take a look at tomorrow's schedule</a></p>
     
     <!-- SCRIPT IS COMMENTED OUT AS WELL -->
@@ -40,7 +40,11 @@
   <!-- -->
   <!-- -->
   <!-- <section class='text-center notification' id="notify">Appointment added to <code>localStorage</code> ✔️</section> -->
-  <section class='text-center notification-2' id="notify">Updated!</section>
+
+  <!-- NOTIFICATION -->
+  <!-- notification-2 -->
+  <section class="text-center notification" id="notify">Updated!</section>
+
   <!-- <section class='text-center deleteNotification' id="notify">Deleted!</section> -->
 <!-- -->
   <!-- <div class="navbar">Jump to
@@ -56,7 +60,10 @@
     <a href="#hour-21">9pm</a>
   </div> -->
 
+  <!-- HOUR BLOCKS -->
   <div class="container">
+
+    <!-- PERSONAL HOUR BLOCKS -->
     <h3>Personal</h3>
     <div id="hour-6" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
@@ -94,6 +101,7 @@
     </div>
 
     <!-- -->
+    <!-- WORKDAY BLOCKS -->
     <h3>Workday</h3>
     <div id="hour-9" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
@@ -187,6 +195,7 @@
     <!-- -->
     <!-- -->
     <!-- additional hours -->
+    <!-- PERSONAL HOURS BLOCK -->
     <h3>Personal Time</h3>
     <div id="hour-18" class="row time-block">
 
@@ -263,5 +272,4 @@
     <script src="./assets/script/script.js"></script>
     
 </body>
-
 </html>

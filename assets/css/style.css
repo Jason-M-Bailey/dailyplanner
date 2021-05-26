@@ -13,7 +13,8 @@ body {
   line-height: 1;
 }
 
-#datetime {
+#datetime,
+#currentDay {
   background: var(--secondary);
   color: var(--light);
   font-size: 20px;
@@ -134,7 +135,8 @@ textarea:hover {
   color: black;
 } */
 
-.notification-2 {
+/* notification-2 */
+.notification {
   font-size: 40px;
   transition: ease-in-out 1s;
   opacity: 0;

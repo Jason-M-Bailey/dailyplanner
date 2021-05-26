@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(".notification").addClass("show");
     setTimeout(function () {
       $(".notification").removeClass("show");
-    }, 5000);
+    }, 2000);
   });
 
   function hourUpdater() {
@@ -47,7 +47,26 @@ $(document).ready(function () {
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
 
-  $("#currentDay").text(moment().add(1, "days").format("dddd, MMMM Do"));
+  $("#hour-30 .description").val(localStorage.getItem("hour-30"));
+  $("#hour-31 .description").val(localStorage.getItem("hour-31"));
+  $("#hour-32 .description").val(localStorage.getItem("hour-32"));
+  $("#hour-33 .description").val(localStorage.getItem("hour-33"));
+  $("#hour-34 .description").val(localStorage.getItem("hour-34"));
+  $("#hour-35 .description").val(localStorage.getItem("hour-35"));
+  $("#hour-36 .description").val(localStorage.getItem("hour-37"));
+  $("#hour-38 .description").val(localStorage.getItem("hour-38"));
+  $("#hour-39 .description").val(localStorage.getItem("hour-39"));
+  $("#hour-40 .description").val(localStorage.getItem("hour-40"));
+  $("#hour-41 .description").val(localStorage.getItem("hour-41"));
+  $("#hour-42 .description").val(localStorage.getItem("hour-42"));
+  $("#hour-43 .description").val(localStorage.getItem("hour-43"));
+  $("#hour-44 .description").val(localStorage.getItem("hour-44"));
+  $("#hour-45 .description").val(localStorage.getItem("hour-45"));
+  $("#hour-46 .description").val(localStorage.getItem("hour-46"));
+  $("#hour-47 .description").val(localStorage.getItem("hour-47"));
+
+
+  $("#currentDay").text(moment().add(1, "days").format("dddd, MMMM Do")); // adds 1 day to moment.js
 });
 
 
@@ -57,14 +76,25 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    $(".notification-2").addClass("show");
+    $(".notification").addClass("show");
     setTimeout(function () {
-      $(".notification-2").removeClass("show");
+      $(".notification").removeClass("show");
       location.reload();
     }, 2000);
-
-    // something something clear value
-    // removeItem(time, value);
-    // location.reload();
   });
 });
+
+
+// STICKY DATETIME ON SCROLL
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("currentDay");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}

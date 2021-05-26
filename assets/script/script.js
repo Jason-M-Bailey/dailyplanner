@@ -1,24 +1,21 @@
 // add days forward/back buttons
 
+
+
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
-    // $(".notification").addClass("show");
-    $(".notification-2").addClass("show");
+    $(".notification").addClass("show"); // changed from -2
     setTimeout(function () {
-      // $(".notification").removeClass("show");
-      $(".notification-2").removeClass("show");
+      $(".notification").removeClass("show"); // changed from -2
     }, 2000);
   });
 
   // var interval = setInterval(hourUpdater, 15000);
 
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
-
-  console.log()
-
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -85,9 +82,9 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
 
-    $(".notification-2").addClass("show");
+    $(".notification").addClass("show"); // changed from -2
     setTimeout(function () {
-      $(".notification-2").removeClass("show");
+      $(".notification").removeClass("show"); // changed from -2 
       location.reload();
     }, 2000);
 
