@@ -78,7 +78,7 @@ $(document).ready(function () {
   });
 });
 
-// copy to clipboard
+//copy to clipboard
 // var copyBtn = document.getElementsByClassName(".copy");
 // var textArea = document.getElementsByClassName(".textarea");
 
