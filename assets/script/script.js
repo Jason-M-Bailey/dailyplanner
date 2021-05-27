@@ -3,13 +3,15 @@ $(document).ready(function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
-    $(".notification").addClass("show");
-    setTimeout(function () {
-      $(".notification").removeClass("show");
-    }, 2000);
+    // $(".notification").addClass("show");
+    // setTimeout(function () {
+    //   $(".notification").removeClass("show");
+    // }, 2000); 
   });
 
+  // how to view what is currently saved in local storage?
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
+  // console.log(this.value);
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -27,7 +29,7 @@ $(document).ready(function () {
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
-});
+}); 
 
 var datetime = null,
   date = null;
@@ -59,6 +61,7 @@ function hourUpdater() {
     }
   });
 }
+
 hourUpdater();
 
 $(document).ready(function () {
@@ -66,12 +69,12 @@ $(document).ready(function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
+    location.reload();
 
-    $(".notification").addClass("show");
-    setTimeout(function () {
-      $(".notification").removeClass("show");
-      location.reload();
-    }, 2000);
+    // $(".notification").addClass("show");
+    // setTimeout(function () {
+      // $(".notification").removeClass("show");
+    // }); // add ", 2000" b/n curly n paran
   });
 });
 
@@ -90,3 +93,12 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+// HOW TO: MOVE APPT FROM ONE TIME BLOCK TO THE NEXT - i.e. delay appointment one hour
+
+// function 
+// on click
+// move (copy?) to next sibling
+// (delete from current sibling)
+
