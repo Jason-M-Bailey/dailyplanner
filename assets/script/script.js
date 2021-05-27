@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
-    var value = $(this).siblings(".description").val();
+    var value = $(this).siblings(".description").val(); 
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
     // $(".notification").addClass("show");
@@ -100,3 +100,5 @@ function myFunction() {
 // on click
 // move (copy?) to next sibling
 // (delete from current sibling)
+
+console.log(localStorage);
