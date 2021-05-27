@@ -6,7 +6,7 @@ $(document).ready(function () {
     // $(".notification").addClass("show");
     // setTimeout(function () {
     //   $(".notification").removeClass("show");
-    // }, 2000); 
+    // }, 2000);
   });
 
   // how to view what is currently saved in local storage?
@@ -29,7 +29,7 @@ $(document).ready(function () {
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
   $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
-}); 
+});
 
 var datetime = null,
   date = null;
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
     // $(".notification").addClass("show");
     // setTimeout(function () {
-      // $(".notification").removeClass("show");
+    // $(".notification").removeClass("show");
     // }); // add ", 2000" b/n curly n paran
   });
 });
@@ -94,11 +94,9 @@ function myFunction() {
   }
 }
 
-
 // HOW TO: MOVE APPT FROM ONE TIME BLOCK TO THE NEXT - i.e. delay appointment one hour
 
-// function 
+// function
 // on click
 // move (copy?) to next sibling
 // (delete from current sibling)
-
