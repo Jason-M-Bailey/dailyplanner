@@ -1,17 +1,14 @@
+
+// save to local storage
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
-    var value = $(this).siblings(".description").val(); 
+    var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
-    // $(".notification").addClass("show");
-    // setTimeout(function () {
-    //   $(".notification").removeClass("show");
-    // }, 2000);
   });
 
-  // how to view what is currently saved in local storage?
+  // after save, get the text from local storage
   $("#hour-6 .description").val(localStorage.getItem("hour-6"));
-  // console.log(this.value);
   $("#hour-7 .description").val(localStorage.getItem("hour-7"));
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -31,6 +28,8 @@ $(document).ready(function () {
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
 });
 
+
+// dynamic clock displaying current time
 var datetime = null,
   date = null;
 
@@ -45,6 +44,8 @@ $(document).ready(function () {
   setInterval(update, 1000);
 });
 
+
+// color code hour blocks by past, current, future
 function hourUpdater() {
   var currentHour = moment().hours();
   $(".time-block").each(function () {
@@ -64,19 +65,17 @@ function hourUpdater() {
 
 hourUpdater();
 
+
+// delete text from time block
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
-    location.reload();
-
-    // $(".notification").addClass("show");
-    // setTimeout(function () {
-    // $(".notification").removeClass("show");
-    // }); // add ", 2000" b/n curly n paran
+    location.reload(); // refresh the page so the text disappears
   });
 });
+
 
 // STICKY DATETIME ON SCROLL
 window.onscroll = function () {
@@ -94,11 +93,6 @@ function myFunction() {
   }
 }
 
-// HOW TO: MOVE APPT FROM ONE TIME BLOCK TO THE NEXT - i.e. delay appointment one hour
 
-// function
-// on click
-// move (copy?) to next sibling
-// (delete from current sibling)
-
+// check what is in local storage
 console.log(localStorage);
