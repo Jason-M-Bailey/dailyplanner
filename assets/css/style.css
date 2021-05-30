@@ -51,7 +51,7 @@ h3 {
 
 
 textarea {
-  background: transparent; /* allow the hour updater to color the text boxes */
+  background: transparent; /* allows the hour updater to color the text boxes */
   border: none;
   /* resize: none; */
   color: var(--dark);
@@ -99,7 +99,8 @@ textarea:hover {
 }
 
 .saveBtn,
-.deleteBtn {
+.deleteBtn,
+.delayAppt {
   border: 1px solid black;
   background-color: var(--buttons);
   color: white;
@@ -114,13 +115,14 @@ textarea:hover {
   border-bottom-left-radius: 15px;
 }
 
-.deleteBtn {
+.delayAppt {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
 .deleteBtn:hover,
-.saveBtn:hover {
+.saveBtn:hover,
+.delayAppt:hover {
   font-size: 18px;
   transition: all 0.5s ease-in-out;
   box-shadow: 0 0 11px black;
@@ -134,7 +136,8 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .deleteBtn,
-  .saveBtn {
+  .saveBtn,
+  .delayAppt {
     border-radius: 5px;
     font-size: 14px;
   }

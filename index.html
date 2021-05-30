@@ -51,37 +51,41 @@
       <div class="col-md-1 col-sm-12 hour">
         6AM
       </div>
-      <textarea placeholder="type a calendar event and click save ---->" class="col-md-9 col-sm-10 description">
+      <textarea placeholder="type a calendar event and click save ---->" class="col-md-8 col-sm-9 description">
       </textarea>
 
 <!-- -->
 <!-- add a tooltip to show the button was clicked and the action completed -->
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1" id="refresh-btn"><i class="far fa-trash-alt"></i></button>
+      <!-- ARROW DOWN. EXPERIMENT TO MOVE APPT DOWN 1 HOUR -->
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-7"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-7" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         7AM
       </div>
-      <textarea class="col-md-9 col-sm-10 description" placeholder="click the delete button to remove ---->">
+      <textarea class="col-md-8 col-sm-9 description" placeholder="click the delete button to remove ---->">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <!-- ARROW DOWN. EXPERIMENT TO MOVE APPT DOWN 1 HOUR -->
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-8"><i class="fas fa-arrow-down"></i></button>
     </div>
     
     <div id="hour-8" class="row time-block">
       <div class="col-md-1 col-sm-12  hour">
         8AM
       </div>
-      <textarea class="col-md-9 col-sm-9 description">
+      <textarea class="col-md-8 col-sm-9 description" placeholder="click the down arrow to delay your appointment an hour ---->">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
 
       <!-- ARROW DOWN. EXPERIMENT TO MOVE APPT DOWN 1 HOUR -->
-      <!-- <button class="btn col-md-1 col-sm-1" id="delayAppt"><i class="fas fa-arrow-down"></i></button> -->
-
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-9"><i class="fas fa-arrow-down"></i></button>
+<!-- add data-next-id to each time block to move appts -->
     </div>
 
     <!-- WORKDAY BLOCKS -->
@@ -90,90 +94,99 @@
       <div class="col-md-1 col-sm-12 hour">
         9AM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-10"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-10" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         10AM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-11"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-11" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         11AM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-12"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-12" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         12PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-13"><i class="fas fa-arrow-down"></i></button>
     </div>
 
    <div id="hour-13" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         1PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description" placeholder="Lunch - Do Not Schedule">
+      <textarea class="col-md-8 col-sm-9 description" placeholder="Lunch - Do Not Schedule">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-14"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-14" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         2PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-15"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-15" class="row time-block">
      <div class="col-md-1 col-sm-12 hour">
         3PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-16"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-16" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         4PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-17"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-17" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         5PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-18"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <!-- PERSONAL HOURS BLOCK -->
@@ -183,60 +196,66 @@
       <div class="col-md-1 col-sm-12 hour">
         6PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-19"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-19" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         7PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-20"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-20" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         8PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-21"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-21" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         9PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-22"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-22" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         10PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-23"><i class="fas fa-arrow-down"></i></button>
     </div>
 
     <div id="hour-23" class="row time-block">
       <div class="col-md-1 col-sm-12 hour">
         11PM
       </div>
-      <textarea class="col-md-9 col-sm-10 description">
+      <textarea class="col-md-8 col-sm-9 description" placeholder="move to 6am tomorrow">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
+      <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-30"><i class="fas fa-arrow-down"></i></button>
     </div>
     
     <footer>Github: Jason-M-Bailey - UNCC Bootcamp - 2021 - Week 05 Homework

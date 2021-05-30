@@ -29,6 +29,26 @@ $(document).ready(function () {
 });
 
 
+// move appt down one hour 
+$(document).ready(function () {
+  $(".delayAppt").on("click", function () {
+
+    var value = $(this).siblings(".description").val();
+    console.log(value);
+    // alert(value);
+    var nextId = $(this).attr("data-next-id")
+    // var newValue = $(nextId + " textarea").val(value);
+    var time = $(this).parent().attr("id"); // syntax for next 
+    console.log(this);
+    // local get.item 
+    localStorage.setItem(nextId, value); // concat
+    localStorage.removeItem(time, value);
+    location.reload(); // refresh the page so the text disappears
+  });
+});
+
+
+
 // dynamic clock displaying current time
 var datetime = null,
   date = null;
