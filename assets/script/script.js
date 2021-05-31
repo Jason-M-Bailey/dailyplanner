@@ -96,7 +96,6 @@ $(document).ready(function () {
   });
 });
 
-
 // STICKY DATETIME ON SCROLL
 window.onscroll = function () {
   myFunction();
@@ -116,3 +115,4 @@ function myFunction() {
 
 // check what is in local storage
 console.log(localStorage);
+

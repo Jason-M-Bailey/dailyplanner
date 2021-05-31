@@ -31,13 +31,10 @@
     
     <!-- SCRIPT IS COMMENTED OUT AS WELL -->
     <!-- <div id="clock-div"></div> -->
-
     <!-- 2ND ATTEMPT AT DYNAMIC CLOCK -->
       <div id="datetime"></div>
 
-
   </header>
-
   <!-- NOTIFICATION -->
   <!-- <section class="text-center notification" id="notify">Updated!</section> -->
 
@@ -51,14 +48,13 @@
       <div class="col-md-1 col-sm-12 hour">
         6AM
       </div>
-      <textarea placeholder="type a calendar event and click save ---->" class="col-md-8 col-sm-9 description">
+      <button class="btn addBtn col-md-1 col-sm-1"><i class="fas fa-plus"></i></button>
+      <button class="btn minusBtn col-md-1 col-sm-1"><i class="fas fa-minus"></i></button>
+      <textarea placeholder="type a calendar event and click save ---->" class="col-md-6 col-sm-7 description">
       </textarea>
-
-<!-- -->
 <!-- add a tooltip to show the button was clicked and the action completed -->
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1" id="refresh-btn"><i class="far fa-trash-alt"></i></button>
-      <!-- ARROW DOWN. EXPERIMENT TO MOVE APPT DOWN 1 HOUR -->
       <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-7"><i class="fas fa-arrow-down"></i></button>
     </div>
 
@@ -251,7 +247,7 @@
       <div class="col-md-1 col-sm-12 hour">
         11PM
       </div>
-      <textarea class="col-md-8 col-sm-9 description" placeholder="move to 6am tomorrow">
+      <textarea class="col-md-8 col-sm-9 description" placeholder="delay button moves appt to 6am tomorrow">
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>

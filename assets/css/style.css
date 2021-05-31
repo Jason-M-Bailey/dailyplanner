@@ -98,9 +98,7 @@ textarea:hover {
   background-color: var(--primary);
 }
 
-.saveBtn,
-.deleteBtn,
-.delayAppt {
+.btn {
   border: 1px solid black;
   background-color: var(--buttons);
   color: white;
@@ -110,23 +108,27 @@ textarea:hover {
   justify-content: flex-end;
 }
 
-.saveBtn {
+.saveBtn,
+.addBtn {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
-.delayAppt {
+.delayAppt,
+.minusBtn {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-.deleteBtn:hover,
-.saveBtn:hover,
-.delayAppt:hover {
+.btn:hover {
   font-size: 18px;
   transition: all 0.5s ease-in-out;
   box-shadow: 0 0 11px black;
   color: #000;
+}
+
+.hide {
+  display: none;
 }
 
 footer {
