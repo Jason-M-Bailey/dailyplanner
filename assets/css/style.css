@@ -2,16 +2,14 @@
 :root {
   --primary: #74b9ff;
   --secondary: #0984e3;
-  --tertiary: #ff7675;
+  --tertiary: #d727f7;
   --dark: #2d3436;
   --light: #dfe6e9;
   --buttons: #b2bec3;
 }
 
 body {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
-  /* font-size: 16px; */
-  /* line-height: 1; */
+  font-family: Tahoma;
 }
 
 .jumbotron {
@@ -19,12 +17,12 @@ body {
   background-color: transparent;
   color: var(--dark);
   padding: 20px 0px 0px 0px;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 /* style the dynamic clock */
 #dynamicClock,
-#currentDay,
+/* #currentDay, */ 
 #tomorrow {
   background: var(--secondary);
   color: var(--light);
@@ -37,8 +35,6 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  /* background: black;
-  color: white; */
   text-align: center;
   align-items: center;
   z-index: 1;
@@ -51,37 +47,29 @@ h3 {
 textarea {
   background: transparent; /* allows the hour updater to color the text boxes */
   border: none;
-  /* resize: none; */
   color: var(--dark);
-  /* border-left: 1px solid var(--dark); */
   padding: 10px;
-  /* border-radius: 5px; */
   min-height: 20px auto;
 }
 
-/* make it pop */
-textarea:hover {
-  box-shadow: 0 0 11px black;
-}
-
-.description {
+/* .description {
   white-space: pre-wrap;
-}
+} */
 
 .time-block {
-  text-align: center;
-  border-radius: 15px;
+  text-align: right;
+  /* border-radius: 15px; */
 }
 
 .row {
   white-space: pre-wrap;
-  border-top: 3px solid white;
+  border-top: 5px solid white;
 }
 
 .hour {
   background-color: #ffffff;
   color: var(--dark);
-  border-top: 1px dashed var(--light);
+  border-top: 1px double var(--light);
 }
 
 .past {
@@ -97,13 +85,13 @@ textarea:hover {
 }
 
 .btn {
-  border: 1px solid black;
+  border: 1px solid var(--dark);
   background-color: var(--buttons);
   color: white;
   font-size: 14px;
   padding: 1px;
-  align-items: flex-end;
-  justify-content: flex-end;
+  /* align-items: flex-end;
+  justify-content: flex-end; */
 }
 
 .saveBtn,
@@ -123,6 +111,11 @@ textarea:hover {
   transition: all 0.5s ease-in-out;
   box-shadow: 0 0 11px black;
   color: #000;
+}
+
+/* make it pop */
+textarea:hover {
+  box-shadow: 0 0 11px black;
 }
 
 .hide {
