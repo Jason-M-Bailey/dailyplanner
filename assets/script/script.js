@@ -7,24 +7,24 @@ $(document).ready(function () {
   });
 
   // after save, get the text from local storage
-  $("#hour-6 .description").val(localStorage.getItem("hour-6"));
-  $("#hour-7 .description").val(localStorage.getItem("hour-7"));
-  $("#hour-8 .description").val(localStorage.getItem("hour-8"));
-  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
-  $("#hour-10 .description").val(localStorage.getItem("hour-10"));
-  $("#hour-11 .description").val(localStorage.getItem("hour-11"));
-  $("#hour-12 .description").val(localStorage.getItem("hour-12"));
-  $("#hour-13 .description").val(localStorage.getItem("hour-13"));
-  $("#hour-14 .description").val(localStorage.getItem("hour-14"));
-  $("#hour-15 .description").val(localStorage.getItem("hour-15"));
-  $("#hour-16 .description").val(localStorage.getItem("hour-16"));
-  $("#hour-17 .description").val(localStorage.getItem("hour-17"));
-  $("#hour-18 .description").val(localStorage.getItem("hour-18"));
-  $("#hour-19 .description").val(localStorage.getItem("hour-19"));
-  $("#hour-20 .description").val(localStorage.getItem("hour-20"));
-  $("#hour-21 .description").val(localStorage.getItem("hour-21"));
-  $("#hour-22 .description").val(localStorage.getItem("hour-22"));
-  $("#hour-23 .description").val(localStorage.getItem("hour-23"));
+  $("#hr-6 .description").val(localStorage.getItem("hr-6"));
+  $("#hr-7 .description").val(localStorage.getItem("hr-7"));
+  $("#hr-8 .description").val(localStorage.getItem("hr-8"));
+  $("#hr-9 .description").val(localStorage.getItem("hr-9"));
+  $("#hr-10 .description").val(localStorage.getItem("hr-10"));
+  $("#hr-11 .description").val(localStorage.getItem("hr-11"));
+  $("#hr-12 .description").val(localStorage.getItem("hr-12"));
+  $("#hr-13 .description").val(localStorage.getItem("hr-13"));
+  $("#hr-14 .description").val(localStorage.getItem("hr-14"));
+  $("#hr-15 .description").val(localStorage.getItem("hr-15"));
+  $("#hr-16 .description").val(localStorage.getItem("hr-16"));
+  $("#hr-17 .description").val(localStorage.getItem("hr-17"));
+  $("#hr-18 .description").val(localStorage.getItem("hr-18"));
+  $("#hr-19 .description").val(localStorage.getItem("hr-19"));
+  $("#hr-20 .description").val(localStorage.getItem("hr-20"));
+  $("#hr-21 .description").val(localStorage.getItem("hr-21"));
+  $("#hr-22 .description").val(localStorage.getItem("hr-22"));
+  $("#hr-23 .description").val(localStorage.getItem("hr-23"));
 });
 
 // move appt down one hour
