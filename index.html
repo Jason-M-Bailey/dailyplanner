@@ -25,23 +25,17 @@
 <body>
   <header class="jumbotron">
     <h1 class="display-3">Today's Schedule</h1>
-    <p class="lead">Simple calendar app for scheduling your work day</p>
-    <!-- <p id="currentDay" class="lead"></p> -->
+    <!-- <p>Simple calendar app for scheduling your work day</p> removed class="lead" -->
     <p><a href="./nextday.html">Take a look at tomorrow's schedule</a></p>
     
-    <!-- SCRIPT IS COMMENTED OUT AS WELL -->
-    <!-- <div id="clock-div"></div> -->
-    <!-- 2ND ATTEMPT AT DYNAMIC CLOCK -->
-      <div id="datetime"></div>
+    <!-- DYNAMIC CLOCK-->
+    <div id="dynamicClock"></div> 
 
   </header>
-  <!-- NOTIFICATION -->
-  <!-- <section class="text-center notification" id="notify">Updated!</section> -->
 
   <!-- HOUR BLOCKS -->
-  <!-- THIS DOESN'T APPEAR TO HAVE A CLOSING DIV TAG -->
-  <div class="container"> 
-    <p></p>
+  <div class="container">
+
     <!-- PERSONAL HOUR BLOCKS -->
     <h3>Personal</h3>
     <div id="hour-6" class="row time-block">
@@ -52,7 +46,7 @@
       <!-- <button class="btn minusBtn col-md-1 col-sm-1"><i class="fas fa-minus"></i></button> -->
       <textarea placeholder="type a calendar event and click save ---->" class="col-md-8 col-sm-9 description">
       </textarea>
-<!-- add a tooltip to show the button was clicked and the action completed -->
+      <!-- add a tooltip to show the button was clicked and the action completed -->
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1" id="refresh-btn"><i class="far fa-trash-alt"></i></button>
       <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-7"><i class="fas fa-arrow-down"></i></button>
@@ -66,7 +60,8 @@
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
-      <!-- ARROW DOWN. EXPERIMENT TO MOVE APPT DOWN 1 HOUR -->
+      
+      <!-- DELAY APPT DOWN 1 HOUR -->
       <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-8"><i class="fas fa-arrow-down"></i></button>
     </div>
     
@@ -78,10 +73,7 @@
       </textarea>
       <button class="btn saveBtn col-md-1 col-sm-1"><i class="fas fa-save"></i></button>
       <button class="btn deleteBtn col-md-1 col-sm-1"><i class="far fa-trash-alt"></i></button>
-
-      <!-- ARROW DOWN. EXPERIMENT TO MOVE APPT DOWN 1 HOUR -->
       <button class="btn col-md-1 col-sm-1 delayAppt" data-next-id="hour-9"><i class="fas fa-arrow-down"></i></button>
-<!-- add data-next-id to each time block to move appts -->
     </div>
 
     <!-- WORKDAY BLOCKS -->

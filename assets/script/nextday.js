@@ -65,10 +65,8 @@ $(document).ready(function () {
   $("#hour-46 .description").val(localStorage.getItem("hour-46"));
   $("#hour-47 .description").val(localStorage.getItem("hour-47"));
 
-
-  $("#currentDay").text(moment().add(1, "days").format("dddd, MMMM Do")); // adds 1 day to moment.js
+  $("#tomorrow").text(moment().add(1, "days").format("dddd, MMMM Do")); // adds 1 day to moment.js
 });
-
 
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
@@ -84,16 +82,17 @@ $(document).ready(function () {
   });
 });
 
-
 // STICKY DATETIME ON SCROLL
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+  myFunction();
+};
 
-var navbar = document.getElementById("currentDay");
+var navbar = document.getElementById("tomorrow");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }

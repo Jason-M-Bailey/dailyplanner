@@ -1,4 +1,3 @@
-
 // save to local storage
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
@@ -28,42 +27,35 @@ $(document).ready(function () {
   $("#hour-23 .description").val(localStorage.getItem("hour-23"));
 });
 
-
-// move appt down one hour 
+// move appt down one hour
 $(document).ready(function () {
   $(".delayAppt").on("click", function () {
-
     var value = $(this).siblings(".description").val();
-    console.log(value);
-    // alert(value);
-    var nextId = $(this).attr("data-next-id")
-    // var newValue = $(nextId + " textarea").val(value);
-    var time = $(this).parent().attr("id"); // syntax for next 
-    console.log(this);
-    // local get.item 
-    localStorage.setItem(nextId, value); // concat
+    // console.log(value);
+    var nextId = $(this).attr("data-next-id");
+    var time = $(this).parent().attr("id");
+    // console.log(this);
+
+    localStorage.setItem(nextId, value);
     localStorage.removeItem(time, value);
     location.reload(); // refresh the page so the text disappears
   });
 });
 
-
-
 // dynamic clock displaying current time
-var datetime = null,
+var dynamicClock = null,
   date = null;
 
 var update = function () {
   date = moment(new Date());
-  datetime.html(date.format("dddd, MMMM Do YYYY, h:mm:ss a"));
+  dynamicClock.html(date.format("dddd, MMMM Do YYYY, h:mm:ss a"));
 };
 
 $(document).ready(function () {
-  datetime = $("#datetime");
+  dynamicClock = $("#dynamicClock");
   update();
   setInterval(update, 1000);
 });
-
 
 // color code hour blocks by past, current, future
 function hourUpdater() {
@@ -85,7 +77,6 @@ function hourUpdater() {
 
 hourUpdater();
 
-
 // delete text from time block
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
@@ -96,12 +87,12 @@ $(document).ready(function () {
   });
 });
 
-// STICKY DATETIME ON SCROLL
+// STICKY dynamicClock ON SCROLL
 window.onscroll = function () {
   myFunction();
 };
 
-var navbar = document.getElementById("datetime");
+var navbar = document.getElementById("dynamicClock");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
@@ -112,7 +103,5 @@ function myFunction() {
   }
 }
 
-
 // check what is in local storage
 console.log(localStorage);
-
