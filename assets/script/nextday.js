@@ -47,23 +47,24 @@ $(document).ready(function () {
   // $("#hour-22 .description").val(localStorage.getItem("hour-22"));
   // $("#hour-23 .description").val(localStorage.getItem("hour-23"));
 
-  $("#hour-30 .description").val(localStorage.getItem("hour-30"));
-  $("#hour-31 .description").val(localStorage.getItem("hour-31"));
-  $("#hour-32 .description").val(localStorage.getItem("hour-32"));
-  $("#hour-33 .description").val(localStorage.getItem("hour-33"));
-  $("#hour-34 .description").val(localStorage.getItem("hour-34"));
-  $("#hour-35 .description").val(localStorage.getItem("hour-35"));
-  $("#hour-36 .description").val(localStorage.getItem("hour-37"));
-  $("#hour-38 .description").val(localStorage.getItem("hour-38"));
-  $("#hour-39 .description").val(localStorage.getItem("hour-39"));
-  $("#hour-40 .description").val(localStorage.getItem("hour-40"));
-  $("#hour-41 .description").val(localStorage.getItem("hour-41"));
-  $("#hour-42 .description").val(localStorage.getItem("hour-42"));
-  $("#hour-43 .description").val(localStorage.getItem("hour-43"));
-  $("#hour-44 .description").val(localStorage.getItem("hour-44"));
-  $("#hour-45 .description").val(localStorage.getItem("hour-45"));
-  $("#hour-46 .description").val(localStorage.getItem("hour-46"));
-  $("#hour-47 .description").val(localStorage.getItem("hour-47"));
+  $("#hr-30 .description").val(localStorage.getItem("hr-30"));
+  $("#hr-31 .description").val(localStorage.getItem("hr-31"));
+  $("#hr-32 .description").val(localStorage.getItem("hr-32"));
+  $("#hr-33 .description").val(localStorage.getItem("hr-33"));
+  $("#hr-34 .description").val(localStorage.getItem("hr-34"));
+  $("#hr-35 .description").val(localStorage.getItem("hr-35"));
+  $("#hr-36 .description").val(localStorage.getItem("hr-36"));
+  $("#hr-37 .description").val(localStorage.getItem("hr-37"));
+  $("#hr-38 .description").val(localStorage.getItem("hr-38"));
+  $("#hr-39 .description").val(localStorage.getItem("hr-39"));
+  $("#hr-40 .description").val(localStorage.getItem("hr-40"));
+  $("#hr-41 .description").val(localStorage.getItem("hr-41"));
+  $("#hr-42 .description").val(localStorage.getItem("hr-42"));
+  $("#hr-43 .description").val(localStorage.getItem("hr-43"));
+  $("#hr-44 .description").val(localStorage.getItem("hr-44"));
+  $("#hr-45 .description").val(localStorage.getItem("hr-45"));
+  $("#hr-46 .description").val(localStorage.getItem("hr-46"));
+  $("#hr-47 .description").val(localStorage.getItem("hr-47"));
 
   $("#tomorrow").text(moment().add(1, "days").format("dddd, MMMM Do")); // adds 1 day to moment.js
 });
@@ -93,3 +94,18 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+// move appt down one hour
+$(document).ready(function () {
+  $(".delayAppt").on("click", function () {
+    var value = $(this).siblings(".description").val();
+    // console.log(value);
+    var nextId = $(this).attr("data-next-id");
+    var time = $(this).parent().attr("id");
+    // console.log(this);
+
+    localStorage.setItem(nextId, value);
+    localStorage.removeItem(time, value);
+    location.reload(); // refresh the page so the text disappears
+  });
+});
