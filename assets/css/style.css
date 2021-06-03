@@ -1,4 +1,4 @@
-/* a beautiful palette */
+/* CREATE A BEAUTIFUL PALETTE */
 :root {
   --primary: #74b9ff;
   --secondary: #0984e3;
@@ -17,12 +17,10 @@ body {
   background-color: transparent;
   color: var(--dark);
   padding: 20px 0px 0px 0px;
-  /* margin-bottom: 0; */
 }
 
-/* style the dynamic clock */
+/* STYLE THE DYNAMIC CLOCK */
 #dynamicClock,
-/* #currentDay, */ 
 #tomorrow {
   background: var(--secondary);
   color: var(--light);
@@ -30,7 +28,7 @@ body {
   padding: 2%;
 }
 
-/* keep the dynamic clock at the top of the screen */
+/* KEEP DYNAMIC CLOCK ON SCREEN USING STICKY */
 .sticky {
   position: fixed;
   width: 100%;
@@ -45,20 +43,15 @@ h3 {
 }
 
 textarea {
-  background: transparent; /* allows the hour updater to color the text boxes */
+  background: transparent; /* ALLOWS HOUR UPDATER TO STYLE BACKGROUND COLOR */
   border: none;
   color: var(--dark);
   padding: 10px;
   min-height: 20px auto;
 }
 
-/* .description {
-  white-space: pre-wrap;
-} */
-
 .time-block {
   text-align: right;
-  /* border-radius: 15px; */
 }
 
 .row {
@@ -90,8 +83,6 @@ textarea {
   color: white;
   font-size: 14px;
   padding: 1px;
-  /* align-items: flex-end;
-  justify-content: flex-end; */
 }
 
 .saveBtn,
@@ -113,7 +104,7 @@ textarea {
   color: #000;
 }
 
-/* make it pop */
+/* MAKE HOVER POP */
 textarea:hover {
   box-shadow: 0 0 11px black;
 }

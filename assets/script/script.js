@@ -1,4 +1,4 @@
-// save to local storage
+// SAVE TO LOCAL STORAGE
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
@@ -6,7 +6,7 @@ $(document).ready(function () {
     localStorage.setItem(time, value);
   });
 
-  // after save, get the text from local storage
+  // AFTER SAVE, GET TEXT FROM LOCAL STORAGE
   $("#hr-6 .description").val(localStorage.getItem("hr-6"));
   $("#hr-7 .description").val(localStorage.getItem("hr-7"));
   $("#hr-8 .description").val(localStorage.getItem("hr-8"));
@@ -27,22 +27,20 @@ $(document).ready(function () {
   $("#hr-23 .description").val(localStorage.getItem("hr-23"));
 });
 
-// move appt down one hour
+// DELAY APPOINTMENT ONE HOUR
 $(document).ready(function () {
   $(".delayAppt").on("click", function () {
     var value = $(this).siblings(".description").val();
-    // console.log(value);
     var nextId = $(this).attr("data-next-id");
     var time = $(this).parent().attr("id");
-    // console.log(this);
 
     localStorage.setItem(nextId, value);
     localStorage.removeItem(time, value);
-    location.reload(); // refresh the page so the text disappears
+    location.reload(); 
   });
 });
 
-// dynamic clock displaying current time
+// DYNAMIC CLOCK DISPLAYING CURRENT TIME
 var dynamicClock = null,
   date = null;
 
@@ -57,7 +55,7 @@ $(document).ready(function () {
   setInterval(update, 1000);
 });
 
-// color code hour blocks by past, current, future
+// COLOR CODE HOUR BLOCKS BY PAST, CURRENT, FUTURE
 function hourUpdater() {
   var currentHour = moment().hours();
   $(".time-block").each(function () {
@@ -77,13 +75,13 @@ function hourUpdater() {
 
 hourUpdater();
 
-// delete text from time block
+// DELETE TEXT FROM TIME BLOCK
 $(document).ready(function () {
   $(".deleteBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.removeItem(time, value);
-    location.reload(); // refresh the page so the text disappears
+    location.reload();
   });
 });
 
@@ -102,6 +100,3 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-
-// check what is in local storage
-console.log(localStorage);
